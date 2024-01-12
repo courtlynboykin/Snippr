@@ -6,7 +6,7 @@ const algo = 'aes-256-cbc'
 
 
 // Encryption function
-function encrypt(text, key) {
+function encrypt(text) {
   const iv = crypto.randomBytes(16)
   const cipher = crypto.createCipheriv(algo, key, iv)
   let encrypted = cipher.update(text, 'utf-8', 'hex')
